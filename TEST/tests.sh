@@ -6,6 +6,7 @@ files=( "./TEST/cfail.dats"
 	"./TEST/list0_tests.dats"
 	"./TEST/show6.dats"
         "./TEST/s2e_funsort.dats"
+	"./TEST/lincp.dats"
       )
 
 ESC_CODE="\e["
