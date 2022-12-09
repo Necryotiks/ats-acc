@@ -85,6 +85,9 @@ print_lincp(xs: toks, color: bool, verbose: bool): void
 fun{}
 print_last(xs: toktup, color: bool, verbose: bool): void
 
+fun{}
+print_ssort(xs: toks, color: bool, verbose: bool): void
+
 //(*
 fun{}
 print_simpre(xs: toks, color: bool, verbose: bool): void

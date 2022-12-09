@@ -48,6 +48,7 @@ free_errkind
       | ~ERRnonex  l => free_toks(l)
       | ~ERRlast   l => (free_toktup(l))
       | ~ERRunit   _ => ()
+      | ~ERRssort  l => free_toks(l)
       | ~ERRlincp  l => free_toks(l)
       //
       | ~ERRsimpre  l => free_toks(l)
@@ -77,6 +78,7 @@ get_errkind_string
     | ERRsortu  _ => "ERRsortu"
     | ERRnonex  _ => "ERRnonex"
     | ERRunit   _ => "ERRunit"
+    | ERRssort  _ => "ERRssort"
     | ERRlincp  _ => "ERRlincp"
     //
     | ERRsimpre _ => "ERRstaimpre"
@@ -104,6 +106,7 @@ implement{} print_warn   (xs: toks, color: bool, verbose: bool): void = (free_to
 implement{} print_unit   ((*    *)): void = ()
 implement{} print_lincp  (xs: toks, color: bool, verbose: bool): void = (free_toks(xs))
 implement{} print_last (xs: toktup, color: bool, verbose: bool): void = (free_toktup(xs))
+implement{} print_ssort  (xs: toks, color: bool, verbose: bool): void = (free_toks(xs))
 //
 implement{} print_simpre (xs: toks, color: bool, verbose: bool): void = (free_toks(xs))
 
@@ -130,6 +133,7 @@ print_errkind_single
   | ~ERRlast   x => print_last<>(x, color, verbose)
   | ~ERRwarn   x => print_warn<>(x, color, verbose)
   | ~ERRunit   _ => print_unit<>( )
+  | ~ERRssort  x => print_ssort<>(x, color, verbose)
   | ~ERRlincp  x => print_lincp<>(x, color, verbose)
   //
   | ~ERRsimpre x => print_simpre<>(x, color, verbose)

@@ -24,6 +24,8 @@ datavtype errkind =
   | ERRunit   of () 
   | ERRlincp of toks // the linear dynamic variable [xs$1123(-1)] needs to be preserved but it is consumed instead OR the linear dynamic variable [x$17(-1)] needs to be consumed but it is preserved with the type [S2Eat(S2Ecst(atsvoid_t0ype), S2Evar(l(307)))] instead.
 //(*
+  | ERRssort of toks   // the static expression [...] is expected to be of functional sort but it is assigned the sort [...]
+                       // the static expression [...] is of the sort [...] but it is expected to be of the sort [...]
   | ERRsimpre of toks  // the static expression needs to be impredicative 
                          // but it is assigned the sort [...].
 //*)

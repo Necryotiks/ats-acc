@@ -5,6 +5,7 @@ files=( "./TEST/cfail.dats"
 	# "./TEST/fail2.dats"
 	"./TEST/list0_tests.dats"
 	"./TEST/show6.dats"
+        "./TEST/s2e_funsort.dats"
 	"./TEST/lincp.dats"
       )
 
