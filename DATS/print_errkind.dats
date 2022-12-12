@@ -680,7 +680,6 @@ in
 )
 end
 
-
 implement{}
 print_unit(): void = print "ERRunit"
 
@@ -729,6 +728,7 @@ in
   print_toks_free_nonewln(aft);
          
   print_after_all;
+end
 
 implement{}
 print_lincp
